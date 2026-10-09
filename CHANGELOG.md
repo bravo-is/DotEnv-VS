@@ -7,6 +7,7 @@
 - Add workspace, project/target, and configuration overrides with local versioned settings.
 - Introduce explicit launch contexts and safe Output diagnostics.
 - Add a Tools command, native configuration UI, migration, and integration samples.
+- Add a contributor deployment command that refreshes experimental-profile registration after reinstalling.
 
 The development package is version 0.9.0. Release remains gated on the complete IDE acceptance matrix.
 
