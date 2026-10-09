@@ -41,7 +41,8 @@ Free and MIT-licensed. No telemetry or external network calls. Output diagnostic
 - Icon: `assets/icon.png`, 90 × 90.
 - License: `LICENSE`.
 - Privacy statement: `PRIVACY.md`.
-- Repository/support links: add verified public `bravo-is/DotEnv` links after creation.
+- Repository: https://github.com/bravo-is/DotEnv-VS
+- Support/issues: https://github.com/bravo-is/DotEnv-VS/issues
 - Screenshots: `docs/images/automatic-detection.jpg` and `docs/images/configuration-override.jpg`, captured from the running VS2022 extension. Upload these as listing assets and replace relative image links with the assigned asset URLs. Recapture if the final UI changes.
 - Release notes: final 1.0 entry from `CHANGELOG.md`.
 - Compatibility: verify the complete [acceptance matrix](release-validation.md) before submitting the claims above.

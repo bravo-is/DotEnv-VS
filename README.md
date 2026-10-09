@@ -50,6 +50,8 @@ Each program prints PASS or FAIL and writes `dotenv-result.txt`. The solution ex
 
 ## Project information
 
+[Source repository](https://github.com/bravo-is/DotEnv-VS) · [Report an issue](https://github.com/bravo-is/DotEnv-VS/issues)
+
 [Build and contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [MIT license](LICENSE) · [Privacy](PRIVACY.md)
 
 No telemetry or external network calls. Output diagnostics report file paths and safe errors, never environment values. Keep real `.env` files out of source control and issue reports.
