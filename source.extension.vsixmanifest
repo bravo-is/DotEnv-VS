@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="VsDebugEnv.81acf145-db5f-4adf-b854-120ad064a2cb" Version="0.9.0" Language="en-US" Publisher="Israel Bravo" />
+    <DisplayName>DotEnv for Visual Studio</DisplayName>
+    <Description xml:space="preserve">Load .env files when debugging native C++ and CMake projects. Local settings and configuration overrides.</Description>
+    <License>LICENSE</License>
+    <Icon>icon.png</Icon>
+    <Preview>true</Preview>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.12,19.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.7.2,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Debugger" Version="[17.0,)" DisplayName="Visual Studio Debugger" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="VsDebugEnv.UI.pkgdef" />
+    <Asset Type="DebuggerEngineExtension" Path="VsDebugEnv.vsdconfig" />
+  </Assets>
+</PackageManifest>

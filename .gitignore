@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.vs/
+.recovery/
+dist/
+*.user
+*.suo
+*.env
+!*.env.example
+**/out/
+**/dotenv-result.txt

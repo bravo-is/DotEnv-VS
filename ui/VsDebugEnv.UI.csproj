@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>VsDebugEnv.UI</AssemblyName>
+    <Version>0.9.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <EmbeddedResource Update="VSPackage.resx" LogicalName="VSPackage.resources" />
+    <ProjectReference Include="../src/VsDebugEnv.csproj" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="17.11.40262" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.ComponentModelHost" Version="17.11.260" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.Workspace.VSIntegration" Version="17.12.19" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.Composition" Version="17.11.13" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime" Version="17.11.40252" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.Interop" Version="17.11.40262" PrivateAssets="all" />
+      <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.12.2069" GeneratePathProperty="true" ExcludeAssets="all" PrivateAssets="all" />
+  </ItemGroup>
+  <Target Name="CompileMenus" BeforeTargets="PrepareForBuild">
+    <MakeDir Directories="obj" />
+    <Exec Command="&quot;$(PkgMicrosoft_VSSDK_BuildTools)/tools/vssdk/bin/VSCT.exe&quot; Menus.vsct obj/Menus.ctmenu /I&quot;$(PkgMicrosoft_VSSDK_BuildTools)/tools/vssdk/inc&quot;" />
+  </Target>
+</Project>

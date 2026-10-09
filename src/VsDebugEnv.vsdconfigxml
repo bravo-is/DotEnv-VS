@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns="http://schemas.microsoft.com/vstudio/vsdconfig/2008">
+  <ManagedComponent ComponentId="81ACF145-DB5F-4ADF-B854-120AD064A2CB"
+                    ComponentLevel="95000" AssemblyName="VsDebugEnv">
+    <Class Name="VsDebugEnv.LaunchEnvironmentFilter">
+      <Implements>
+        <InterfaceGroup>
+          <Filter>
+            <TransportKind RequiredValue="DkmTransportKind.Local" />
+            <EngineId RequiredValue="DkmEngineId.NativeEng" />
+          </Filter>
+          <Interface Name="IDkmProcessLaunchEnvironmentFilter140" />
+        </InterfaceGroup>
+      </Implements>
+    </Class>
+  </ManagedComponent>
+</Configuration>
