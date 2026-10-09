@@ -6,7 +6,7 @@ Record the exact VSIX checksum, Visual Studio version, profile suffix, timestamp
 
 ## Basic launch and precedence
 
-1. Install the intended VSIX into an initialized experimental profile. Restart and open the solution sample. Do not open DotEnv Options before the first F5.
+1. For development, close Visual Studio and run `Install-Experimental.ps1` with the intended installation path and `-VsixPath` pointing to the exact artifact. It installs and refreshes the experimental profile's registration. Launch the printed command and open the solution sample. Do not open DotEnv Options before the first F5. Keep normal customer-installation checks separate; they must not use this refresh helper.
 2. Copy its `.env.example` to `.env`. Press F5. The sample must exit zero and write a new `dotenv-result.txt` containing `PASS`. Its project already supplies a conflicting debugger variable and an unrelated variable; both assertions must pass.
 3. Open the CMake sample folder. Copy `.env.example` to `.env`, wait for configuration, select `DotEnvSample.exe`, and press F5. Check the result timestamp under `out/build/debug`.
 4. For the separate CMake precedence test, use **Debug → Debug and Launch Settings for DotEnvSample**. Add the following to the generated launch configuration:
